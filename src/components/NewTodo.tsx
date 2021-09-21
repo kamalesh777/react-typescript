@@ -1,6 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
+import { TodoContext } from "../store/todoContext";
 
-const NewToDo:React.FC<{onAddTODO: (text: string) => void}> = (props) => {
+const NewToDo = () => {
+    const toDoCtx = useContext(TodoContext);
 
     const [errMsg, setErrMsg] = useState("");
     const inputTodo = useRef<HTMLInputElement>(null);
@@ -15,7 +17,7 @@ const NewToDo:React.FC<{onAddTODO: (text: string) => void}> = (props) => {
             return
         }
 
-        props.onAddTODO(eneteredValue)
+        toDoCtx.addTodo(eneteredValue)
         setErrMsg("")
 
     }

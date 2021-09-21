@@ -1,11 +1,14 @@
+import { useContext } from "react";
+import { TodoContext } from "../store/todoContext";
 
-import todo from "../model/todoModel";
+const ToDoList = () => {
 
-const ToDoList:React.FC<{items:todo[], remove: (id:string) => void}> = (props) => {
+    const toDoCtx = useContext(TodoContext);
+
     return (
         <ul className="todoList">
-            {props.items.map((i) => (
-            <li key={i.id} onClick={props.remove.bind(null, i.id)}>{i.name}</li>
+            {toDoCtx.todo.map((i, index) => (
+            <li key={i.id} onClick={toDoCtx.removeTodo.bind(null, i.id)}>{index+1}. {i.name}</li>
             ))}
             
         </ul>
