@@ -6,8 +6,60 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  max-width: 1100px;
+  margin: 50px auto;
+}
+.formWrapper{
+  padding: 60px;
+  box-shadow: 2px 1px 3px #ccc;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  max-width: 400px;
+  margin: auto;
+}
+* {
+  box-sizing: border-box;
+}
+label, input{
+  width: 100%;
+}
+.formRow{
+  margin-top: 10px;
+}
+.formControl{
+  padding: 8px;
+}
+.btn{
+  padding: 16px;
+  border: 1px solid #333;
+  outline: 0;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+.btn:hover, .btn:active, .btn:focus{
+  background-color: rgb(202, 62, 62);
+}
+.text-danger{
+  color: rgb(255, 54, 54);
+  font-weight: 600;
+}
+.todoList{
+  list-style: none;
+  padding: 0;
+  
+  max-width: 400px;
+  margin: auto;
+  margin-top: 40px;
+}
+.todoList li {
+  padding: 10px;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 1px 1px 3px rgb(134, 134, 134);
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.todoList li:hover{
+  background-color: #fff;
 }
