@@ -16,6 +16,7 @@ const NewToDo:React.FC<{onAddTODO: (text: string) => void}> = (props) => {
         }
 
         props.onAddTODO(eneteredValue)
+        setErrMsg("")
 
     }
     return (
